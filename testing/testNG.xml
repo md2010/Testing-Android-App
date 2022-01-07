@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTestsSuite">
+
+    <test name="TestCalculatingMonthlyIncome">
+        <classes>
+            <class name="TestCalculatingMonthlyIncome"/>
+        </classes>
+    </test>
+
+    <test name="TestDeletingRecord">
+        <classes>
+            <class name="TestDeletingRecord"/>
+        </classes>
+    </test>
+
+    <test name="TestAddingNewShiftWithEmptyObligatoryField">
+        <classes>
+            <class name="TestAddingNewShiftWithEmptyObligatoryField"/>
+        </classes>
+    </test>
+
+    <test name="TestCalculatingShiftSum">
+        <classes>
+            <class name="TestCalculatingShiftSum"/>
+        </classes>
+    </test>
+
+    <test name="TestAddingNewShift">
+        <classes>
+            <class name="TestAddingNewShift"/>
+        </classes>
+    </test>
+
+    <test name="TestAppWhileIncomingCall">
+        <classes>
+            <class name="TestAppWhileIncomingCall"/>
+        </classes>
+    </test>
+
+    <test name="TestCalculateMonthlyIncomeWithoutData">
+        <classes>
+            <class name="TestCalculateMonthlyIncomeWithoutData"/>
+        </classes>
+    </test>
+
+</suite>
