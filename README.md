@@ -37,7 +37,7 @@ total of worked hours for that month and summed up income for that month.
 
 ● Node.js 
 
-● Appium 1.18.3 
+● Appium 1.18.3 [zip file](Appium-windows-1.18.3.zip)
 
 ● APK App 
 
@@ -49,9 +49,9 @@ ANDROID_HOME = C:\Users\ *user_name* \AppData\Local\Android\Sdk
 
 **System variable** (PATH):
 
-C:\Users\ *user_name* \AppData\Local\Android\Sdk\tools
+C:\Users\ <*user_name*> \AppData\Local\Android\Sdk\tools
 
-C:\Users\ *user_name* \AppData\Local\Android\Sdk\emulator
+C:\Users\ <*user_name*> \AppData\Local\Android\Sdk\emulator
 
 ## 3. Available Tests 
 There are 6 JUnit tests.
@@ -72,7 +72,62 @@ g) **TestCalculateMonthlyIncomeWithoutData** - checking if message is shown (no 
 
 ## 4. Steps to run test
 If you don't have emulator **Nexus 5X API 28**, install it following [instrunctions](https://developer.android.com/studio/run/managing-avds).
+
+**1. Start CMD and type:**
+>cd C:\Users\ <*user_name*> \AppData\Local\Android\Sdk\emulator
+
+>emulator -avd -list-avds 
+
+Nexus_5X_API_28 should be in list of emulators.
+
+Then start emulator with this command:
+>emulator -avd Nexus_5X_API_28
  
-  
+**Open new CMD and type:**
+>cd C:\Users\ <*user_name*> \AppData\Local\Android\Sdk\platform-tools
+
+>adb devices
+
+Result should be:
+
+*List of devices attached*
+
+*emulator-5554 device*
+
+Install the app on emulator with command:
+>adb -s emulator-5554 install C:\ <*path_to_app*>\ <*appName*>.apk
+
+Then type:
+>adb start-server
+
+**2. Start Appium**
+
+Click on *Start Server* and then go to *File->New Session Window*
+
+In *JSON Representation* write following:
+
+    {
+
+       "app": "C:\\ <*path_to_app*> \\ <*appName*>.apk",
+
+       "VERSION": "9.0",
+
+       "deviceName": "emulator",
+
+       "platformName": "Android"
  
- 
+    }
+and click on *Start Session*.
+
+Now we can inspect elements, for more about inspector [click here](https://blog.knoldus.com/finding-elements-using-appium-inspector/).
+
+**3. Open IntelliJ**
+Open folder () which you can download from this repository.
+If you want to run a single test, just right click on any test class (that can be found in *src->main->test->java*) and *Run*.
+If you want to get a report on whole test suite, then write in terminal:
+>mvn test 
+and run command with *Ctrl+Enter*. 
+
+In folder target->surfire-reports you can find generated test report.
+
+## 5. Adding new tests
