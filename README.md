@@ -54,7 +54,7 @@ C:\Users\ <*user_name*> \AppData\Local\Android\Sdk\tools
 C:\Users\ <*user_name*> \AppData\Local\Android\Sdk\emulator
 
 ## 3. Available Tests 
-There are 6 JUnit tests.
+There are 6 JUnit tests written using POM (*Page Object Model*).
 
 a) **TestCalculatingMonthlyIncome** - checking if sum is correct	
 
