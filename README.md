@@ -39,7 +39,7 @@ total of worked hours for that month and summed up income for that month.
 
 ● Appium 1.18.3 [zip file](Appium-windows-1.18.3.zip)
 
-● APK App 
+● APK App (available in this repository)
 
 ● Add enviorment variables: 
 
@@ -71,9 +71,13 @@ f) **TestAppWhileIncomingCall** - testing how app works if someone calls the use
 g) **TestCalculateMonthlyIncomeWithoutData** - checking if message is shown (no data for chosen month)
 
 ## 4. Steps to run test
+**1.Clone this repository.**
+
+**2. Install emulator.**
+
 If you don't have emulator **Nexus 5X API 28**, install it following [instrunctions](https://developer.android.com/studio/run/managing-avds).
 
-**1. Start CMD and type:**
+**3. Start CMD and type:**
 >cd C:\Users\ <*user_name*> \AppData\Local\Android\Sdk\emulator
 
 >emulator -avd -list-avds 
@@ -83,7 +87,7 @@ Nexus_5X_API_28 should be in list of emulators.
 Then start emulator with this command:
 >emulator -avd Nexus_5X_API_28
  
-**Open new CMD and type:**
+**4.Open new CMD and type:**
 >cd C:\Users\ <*user_name*> \AppData\Local\Android\Sdk\platform-tools
 
 >adb devices
@@ -100,7 +104,7 @@ Install the app on emulator with command:
 Then type:
 >adb start-server
 
-**2. Start Appium**
+**5. Start Appium**
 
 Click on *Start Server* and then go to *File->New Session Window*
 
@@ -121,12 +125,13 @@ and click on *Start Session*.
 
 Now we can inspect elements, for more about inspector [click here](https://blog.knoldus.com/finding-elements-using-appium-inspector/).
 
-**3. Open IntelliJ**
+**6. Open IntelliJ**
 
-Open folder *testing* which you can download from this repository.
+Open folder *testing* (which is cloned) in IntelliJ.
 If you want to run a single test, just right click on any test class (that can be found in *src->main->test->java*) and *Run*.
-If you want to get a report on whole test suite, then write in terminal:
+If you want to get a report on whole test suite, then write in *Terminal*:
 >mvn test 
+
 and run command with *Ctrl+Enter*. 
 
 In folder *target->surfire-reports* you can find generated test report.
