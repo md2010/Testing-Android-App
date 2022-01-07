@@ -122,13 +122,14 @@ and click on *Start Session*.
 Now we can inspect elements, for more about inspector [click here](https://blog.knoldus.com/finding-elements-using-appium-inspector/).
 
 **3. Open IntelliJ**
-Open folder () which you can download from this repository.
+
+Open folder *testing* which you can download from this repository.
 If you want to run a single test, just right click on any test class (that can be found in *src->main->test->java*) and *Run*.
 If you want to get a report on whole test suite, then write in terminal:
 >mvn test 
 and run command with *Ctrl+Enter*. 
 
-In folder target->surfire-reports you can find generated test report.
+In folder *target->surfire-reports* you can find generated test report.
 
 ## 5. Adding new test
 If you would like to add new test, right click on *java* folder *New->Java Class* and type the name of test. Code including steps of test can be generated in *Appium* by recording those steps. 
