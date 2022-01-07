@@ -108,7 +108,7 @@ In *JSON Representation* write following:
 
     {
 
-       "app": "C:\\ <*path_to_app*> \\ <*appName*>.apk",
+       "app": "C:\\ <path_to_app> \\ <appName>.apk",
 
        "VERSION": "9.0",
 
@@ -130,4 +130,13 @@ and run command with *Ctrl+Enter*.
 
 In folder target->surfire-reports you can find generated test report.
 
-## 5. Adding new tests
+## 5. Adding new test
+If you would like to add new test, right click on *java* folder *New->Java Class* and type the name of test. Code including steps of test can be generated in *Appium* by recording those steps. 
+Also, you need to add test method name and the name of test class in *testNG.xml* like this:
+
+    <test name=<"test_method_name">>
+          <classes>
+              <class name=<"test_class_name">/>
+          </classes>
+      </test>
+
