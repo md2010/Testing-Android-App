@@ -128,7 +128,15 @@ Now we can inspect elements, for more about inspector [click here](https://blog.
 **6. Open IntelliJ**
 
 Open folder *testing* (which is cloned) in IntelliJ.
+
+**7. Change path to APK**
+
+In test classes, path to APK needs to be changed, more precisely, in *setup()* method.
+
+**8. Run test**
+
 If you want to run a single test, just right click on any test class (that can be found in *src->main->test->java*) and *Run*.
+
 If you want to get a report on whole test suite, then write in *Terminal*:
 >mvn test 
 
@@ -137,8 +145,9 @@ and run command with *Ctrl+Enter*.
 In folder *target->surfire-reports* you can find generated test report.
 
 ## 5. Adding new test
-If you would like to add new test, right click on *java* folder *New->Java Class* and type the name of test. Code including steps of test can be generated in *Appium* by recording those steps. 
-Also, you need to add test method name and the name of test class in *testNG.xml* like this:
+If you would like to add new test, right click on *java* folder *New->Java Class* and type the name of test. Code including steps of test can be generated in *Appium* by recording those steps.
+
+Also, you need to add test method name and the name of the test class in *testNG.xml* like this:
 
     <test name=<"test_method_name">>
           <classes>
